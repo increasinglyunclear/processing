@@ -1,0 +1,9 @@
+// PROCESSING CODE TO CONVERT AN IMAGE TO 1 BIT
+// KEVIN WALKER 2022
+
+PImage img; 
+img = loadImage("test.jpg"); // insert your image here - needs to be in 'data' folder within sketch
+PImage newImage = createImage(img.width, img.height, RGB);
+newImage = img.get();
+newImage.filter(THRESHOLD, 0.5); // adjust if needed
+newImage.save("output.jpg"); // change a
